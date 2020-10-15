@@ -4,7 +4,7 @@ import sys
 from tqdm.auto import tqdm
 import numpy as np
 
-def download_github_content(path, chnksz=1000, filename="image.jpg"):
+def download_github_content(path, filename, chnksz=1000):
     url = ""
     
     try:
@@ -24,6 +24,7 @@ def download_github_content(path, chnksz=1000, filename="image.jpg"):
 
         for pkg in tqdm(gen, total=total, unit="KB"):
             f.write(pkg)
+            
         f.close()
         r.close()
     return
