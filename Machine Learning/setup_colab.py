@@ -5,7 +5,7 @@ import numpy as np
 import os
 
 def download_github_content(path, filename, chnksz=1000):
-    url = f"https://github.com/jpcano1/ISIS_4825_Imagenes_Vision/raw/main/Machine%20Learning/{path}"
+    url = f"https://raw.githubusercontent.com/jpcano1/ISIS_4825_Imagenes_Vision/main/Machine%20Learning/{path}"
     
     try:
         r = requests.get(url, stream=True)
