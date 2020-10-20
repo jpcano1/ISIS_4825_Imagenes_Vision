@@ -38,24 +38,24 @@ def setup_general():
 
 def setup_workshop_8():
     setup_general()
-    print("Workshop 1 Enabled Successfully")
+    print("Workshop 8 Enabled Successfully")
 
 def setup_workshop_9():
     setup_general()
-    print("Workshop 2 Enabled Successfully")
+    print("Workshop 9 Enabled Successfully")
 
 def setup_workshop_10():
     setup_general()
-    print("Workshop 3 Enabled Successfully")
+    print("Workshop 10 Enabled Successfully")
 
 def setup_workshop_11():
     setup_general()
-    print("Workshop 4 Enabled Successfully")
+    print("Workshop 11 Enabled Successfully")
 
 def setup_workshop_12():
     setup_general()
-    print("Workshop 5 Enabled Successfully")
+    print("Workshop 12 Enabled Successfully")
 
 def setup_workshop_13():
     setup_general()
-    print("Workshop 6 Enabled Successfully")
+    print("Workshop 13 Enabled Successfully")
