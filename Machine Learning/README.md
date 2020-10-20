@@ -11,10 +11,10 @@
 import setup_colab as setup
 # Uncomment the number of workshop
 # You're working on
-# setup.setup_workshop_1()
-# setup.setup_workshop_2()
-# setup.setup_workshop_3()
-# setup.setup_workshop_4()
-# setup.setup_workshop_5()
-# setup.setup_workshop_6()
+# setup.setup_workshop_8()
+# setup.setup_workshop_9()
+# setup.setup_workshop_10()
+# setup.setup_workshop_11()
+# setup.setup_workshop_12()
+# setup.setup_workshop_13()
 ```

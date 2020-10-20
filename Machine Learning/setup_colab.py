@@ -36,26 +36,26 @@ def setup_general():
     download_github_content("utils/general.py", "utils/general.py")
     print("General Functions Enabled Successfully")
 
-def setup_workshop_1():
+def setup_workshop_8():
     setup_general()
     print("Workshop 1 Enabled Successfully")
 
-def setup_workshop_2():
+def setup_workshop_9():
     setup_general()
     print("Workshop 2 Enabled Successfully")
 
-def setup_workshop_3():
+def setup_workshop_10():
     setup_general()
     print("Workshop 3 Enabled Successfully")
 
-def setup_workshop_4():
+def setup_workshop_11():
     setup_general()
     print("Workshop 4 Enabled Successfully")
 
-def setup_workshop_5():
+def setup_workshop_12():
     setup_general()
     print("Workshop 5 Enabled Successfully")
 
-def setup_workshop_6():
+def setup_workshop_13():
     setup_general()
     print("Workshop 6 Enabled Successfully")
