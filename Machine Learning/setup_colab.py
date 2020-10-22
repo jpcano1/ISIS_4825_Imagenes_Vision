@@ -36,7 +36,7 @@ def setup_kaggle_token(filename: str):
     files.upload()
     clear_output(wait=True)
     os.makedirs("~/.kaggle", exist_ok=True)
-    copy(filename, "~/.kaggle/")
+    copy(filename, f"~/.kaggle/{filename}")
     os.chmod(f"~/.kaggle/{filename}", 0o600)
 
 def setup_general():
