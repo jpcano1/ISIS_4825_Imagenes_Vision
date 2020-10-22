@@ -28,7 +28,7 @@ def read_listdir(dir_):
 
 def extract_file(filename, dst=None):
     with zipfile.ZipFile(filename) as zfile:
-        print("\nExtrayedo Zip File...")
+        print("\nExtrayendo Zip File...")
         zfile.extractall(dst)
         print("Eliminando Zip File...")
         os.remove(filename)
