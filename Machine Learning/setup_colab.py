@@ -56,6 +56,8 @@ def setup_workshop_9(filename: str="kaggle.json"):
     setup_kaggle_token(filename)
     os.system("pip install -q kaggle==1.5.6")
     os.system("kaggle datasets download -d datamunge/sign-language-mnist")
+    from utils import general as gen
+    gen.extract_file("sign-language-mnist.zip", "data")
     print("Workshop 9 Enabled Successfully")
 
 def setup_workshop_10():

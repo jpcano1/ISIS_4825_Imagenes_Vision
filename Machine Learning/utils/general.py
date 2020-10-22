@@ -26,10 +26,10 @@ def read_listdir(dir_):
         full_dirs.append(full_dir)
     return np.sort(full_dirs)
 
-def extract_file(filename):
+def extract_file(filename, dst=None):
     with zipfile.ZipFile(filename) as zfile:
         print("\nExtrayedo Zip File...")
-        zfile.extractall()
+        zfile.extractall(dst)
         print("Eliminando Zip File...")
         os.remove(filename)
     return
