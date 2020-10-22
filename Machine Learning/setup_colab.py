@@ -3,6 +3,9 @@ import sys
 from tqdm.auto import tqdm
 import numpy as np
 import os
+from shutil import copyfile
+from google.colab import files
+from IPython.display import clear_output
 
 def download_github_content(path, filename, chnksz=1000):
     url = f"https://raw.githubusercontent.com/jpcano1/ISIS_4825_Imagenes_Vision/main/Machine%20Learning/{path}"
@@ -28,6 +31,14 @@ def download_github_content(path, filename, chnksz=1000):
         r.close()
     return
 
+def setup_kaggle(filename: str):
+    assert filename.endswith(".json"), "El archivo no es JSON"
+    files.upload()
+    clear_output(wait=True)
+    os.makedirs("~/.kaggle", exist_ok=True)
+    copyfile(filename, "~/.kaggle/")
+    os.chmod(f"~/.kaggle/{filename}", 0o600)
+
 def setup_general():
     os.makedirs("utils", exist_ok=True)
     with open("utils/__init__.py", "wb"):
@@ -40,8 +51,9 @@ def setup_workshop_8():
     setup_general()
     print("Workshop 8 Enabled Successfully")
 
-def setup_workshop_9():
+def setup_workshop_9(filename: str="kaggle.json"):
     setup_general()
+    setup_kaggle(filename)
     print("Workshop 9 Enabled Successfully")
 
 def setup_workshop_10():
