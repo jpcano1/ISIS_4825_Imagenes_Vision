@@ -3,7 +3,7 @@ import sys
 from tqdm.auto import tqdm
 import numpy as np
 import os
-from shutil import copyfile
+from shutil import copy
 from google.colab import files
 from IPython.display import clear_output
 
@@ -36,7 +36,7 @@ def setup_kaggle_token(filename: str):
     files.upload()
     clear_output(wait=True)
     os.makedirs("~/.kaggle", exist_ok=True)
-    copyfile(filename, "~/.kaggle/")
+    copy(filename, "~/.kaggle/")
     os.chmod(f"~/.kaggle/{filename}", 0o600)
 
 def setup_general():
