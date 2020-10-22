@@ -31,7 +31,7 @@ def download_github_content(path, filename, chnksz=1000):
         r.close()
     return
 
-def setup_kaggle(filename: str):
+def setup_kaggle_token(filename: str):
     assert filename.endswith(".json"), "El archivo no es JSON"
     files.upload()
     clear_output(wait=True)
@@ -53,7 +53,8 @@ def setup_workshop_8():
 
 def setup_workshop_9(filename: str="kaggle.json"):
     setup_general()
-    setup_kaggle(filename)
+    setup_kaggle_token(filename)
+    os.system("pip install -q kaggle==1.5.6")
     print("Workshop 9 Enabled Successfully")
 
 def setup_workshop_10():
