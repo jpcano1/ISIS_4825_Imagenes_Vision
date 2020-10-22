@@ -119,6 +119,9 @@ def download_content(url, chnksz=1000, filename="image.jpg", zip=False):
 
 def download_file_from_google_drive(id_, filename, size=None,
                                     chnksz=1000, zip=False):
+    """
+    Retrieved and Improved from https://stackoverflow.com/a/39225039
+    """
     def get_confirm_token(response):
         for key, value in response.cookies.items():
             if key.startswith('download_warning'):

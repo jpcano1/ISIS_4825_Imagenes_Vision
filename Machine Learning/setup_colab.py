@@ -41,8 +41,8 @@ def setup_kaggle_token(filename: str):
 
 def setup_general():
     os.makedirs("utils", exist_ok=True)
-    with open("utils/__init__.py", "wb"):
-        pass
+    with open("utils/__init__.py", "wb") as f:
+        f.close()
 
     download_github_content("utils/general.py", "utils/general.py")
     print("General Functions Enabled Successfully")
