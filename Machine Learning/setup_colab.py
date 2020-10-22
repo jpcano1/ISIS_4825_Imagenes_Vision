@@ -35,9 +35,9 @@ def setup_kaggle_token(filename: str):
     assert filename.endswith(".json"), "El archivo no es JSON"
     files.upload()
     clear_output(wait=True)
-    os.makedirs("~/.kaggle", exist_ok=True)
-    copy(filename, f"~/.kaggle/{filename}")
-    os.chmod(f"~/.kaggle/{filename}", 0o600)
+    os.system("mkdir ~/.kaggle")
+    os.system(f"cp {filename} ~/.kaggle/")
+    os.system(f"chmod 600 ~/.kaggle/{filename}")
 
 def setup_general():
     os.makedirs("utils", exist_ok=True)
@@ -55,6 +55,7 @@ def setup_workshop_9(filename: str="kaggle.json"):
     setup_general()
     setup_kaggle_token(filename)
     os.system("pip install -q kaggle==1.5.6")
+    os.system("kaggle datasets download -d datamunge/sign-language-mnist")
     print("Workshop 9 Enabled Successfully")
 
 def setup_workshop_10():
